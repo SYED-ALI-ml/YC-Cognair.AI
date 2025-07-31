@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Navigation from "@/components/Navigation";
+import AnalyticsDashboard from "@/components/AnalyticsDashboard";
 import { 
   Monitor, 
   Shield, 
@@ -81,20 +82,23 @@ const Index = () => {
       <div className="fixed inset-0 mesh-gradient pointer-events-none" />
       
       {/* Hero Section */}
-      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-20">
+      <section ref={heroRef} className="relative min-h-screen flex items-center justify-center px-8 md:px-6 overflow-hidden pt-32 md:pt-20">
         <div className="absolute inset-0 perspective-1000">
-          <div 
-            className="absolute inset-0 transform-3d"
+        <motion.div 
+            className="absolute inset-0 transform-3d parallax-container"
             style={{
-              transform: `rotateX(${scrollY * 0.1}deg) translateY(${scrollY * 0.5}px)`,
+              transform: `rotateX(${scrollY * 0.05}deg) translateY(${scrollY * 0.3}px) translateZ(0px)`,
             }}
+            initial={{ scale: 1.1, opacity: 0 }}
+            animate={{ scale: 1, opacity: 0.3 }}
+            transition={{ duration: 1.2 }}
           >
             <img 
               src={heroImage} 
               alt="Replete Dashboard" 
-              className="w-full h-full object-cover opacity-30"
+              className="w-full h-full object-cover"
             />
-          </div>
+          </motion.div>
         </div>
         
         <FloatingStats />
@@ -104,21 +108,36 @@ const Index = () => {
             🚀 Now in Private Beta
           </Badge>
           
-          <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
+          <motion.h1 
+            className="text-6xl md:text-8xl font-bold mb-8 leading-tight"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+          >
             <span className="text-gradient">Replete:</span>
             <br />
-            <span className="text-white">Work Seen.</span>
+            <span className="text-white highlight-swipe" style={{ animationDelay: '1s' }}>Work Seen.</span>
             <br />
-            <span className="text-electric">Time Valued.</span>
-          </h1>
+            <span className="text-electric highlight-swipe" style={{ animationDelay: '1.5s' }}>Time Valued.</span>
+          </motion.h1>
           
-          <p className="text-xl md:text-2xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
+          <motion.p 
+            className="text-xl md:text-2xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.5 }}
+          >
             Transform remote productivity with intelligent screen monitoring. 
             Real-time insights, automated alerts, and seamless integration 
             for the modern workplace.
-          </p>
+          </motion.p>
           
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+          <motion.div 
+            className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+          >
             <Button className="btn-primary group">
               Get a Demo
               <Play className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -127,7 +146,7 @@ const Index = () => {
               Watch How It Works
               <Eye className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
             </Button>
-          </div>
+          </motion.div>
           
           <div className="mt-16 animate-bounce">
             <ChevronDown className="w-8 h-8 text-text-muted mx-auto" />
@@ -148,52 +167,38 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div className="space-y-8">
-              <div className="glass-card-intense p-8 group hover:scale-105 transition-all duration-500">
-                <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-primary rounded-2xl flex items-center justify-center glow">
-                    <Monitor className="w-6 h-6 text-white" />
+            <motion.div 
+              className="space-y-8"
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              {[
+                { icon: Monitor, color: 'bg-primary', title: 'Silent Monitoring', desc: 'Lightweight agent runs seamlessly in the background, capturing screen activity without impacting performance or workflow.' },
+                { icon: Activity, color: 'bg-accent-cyan', title: 'Real-Time Analytics', desc: 'AI-powered analysis provides instant insights into app usage, active time, and productivity patterns.' },
+                { icon: TrendingUp, color: 'bg-accent-purple', title: 'Actionable Insights', desc: 'Smart alerts and detailed reports help teams optimize productivity and identify improvement opportunities.' }
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  className="glass-card-intense p-8 card-hover-glow"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-start gap-6">
+                    <div className={`w-12 h-12 ${item.color} rounded-2xl flex items-center justify-center glow`}>
+                      <item.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h3 className="text-2xl font-semibold mb-3 text-white">{item.title}</h3>
+                      <p className="text-text-secondary">{item.desc}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-white">Silent Monitoring</h3>
-                    <p className="text-text-secondary">
-                      Lightweight agent runs seamlessly in the background, capturing screen activity 
-                      without impacting performance or workflow.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="glass-card-intense p-8 group hover:scale-105 transition-all duration-500">
-                <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-accent-cyan rounded-2xl flex items-center justify-center glow">
-                    <Activity className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-white">Real-Time Analytics</h3>
-                    <p className="text-text-secondary">
-                      AI-powered analysis provides instant insights into app usage, 
-                      active time, and productivity patterns.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="glass-card-intense p-8 group hover:scale-105 transition-all duration-500">
-                <div className="flex items-start gap-6">
-                  <div className="w-12 h-12 bg-accent-purple rounded-2xl flex items-center justify-center glow">
-                    <TrendingUp className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-white">Actionable Insights</h3>
-                    <p className="text-text-secondary">
-                      Smart alerts and detailed reports help teams optimize 
-                      productivity and identify improvement opportunities.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+                </motion.div>
+              ))}
+            </motion.div>
             
             <div className="relative">
               <div className="glass-card-intense p-8 h-96 flex items-center justify-center">
@@ -211,6 +216,9 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Analytics Dashboard Section */}
+      <AnalyticsDashboard />
+
       {/* Features Section */}
       <section className="py-32 px-6 relative">
         <div className="max-w-7xl mx-auto">
@@ -223,13 +231,14 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: Clock,
                 title: "Time Tracking",
                 description: "Automatic time logging with intelligent categorization of active vs idle periods.",
-                color: "bg-green-500"
+                color: "bg-green-500",
+                pulse: true
               },
               {
                 icon: BarChart3,
@@ -247,7 +256,8 @@ const Index = () => {
                 icon: AlertTriangle,
                 title: "Smart Alerts",
                 description: "Automated notifications for extended idle time and unusual activity patterns.",
-                color: "bg-yellow-500"
+                color: "bg-yellow-500",
+                pulse: true
               },
               {
                 icon: Shield,
@@ -262,16 +272,25 @@ const Index = () => {
                 color: "bg-indigo-500"
               }
             ].map((feature, index) => (
-              <Card 
-                key={index} 
-                className="glass-card-intense p-6 group hover:scale-105 transition-all duration-500 hover:glow-intense"
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 50, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.6, 
+                  delay: index * 0.1,
+                  ease: "easeOut"
+                }}
+                viewport={{ once: true }}
               >
-                <div className={`w-12 h-12 ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
-                  <feature.icon className="w-6 h-6 text-white" />
-                </div>
-                <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
-                <p className="text-text-secondary">{feature.description}</p>
-              </Card>
+                <Card className="glass-card-intense p-6 card-hover-glow h-full">
+                  <div className={`w-12 h-12 ${feature.color} rounded-2xl flex items-center justify-center mb-6 ${feature.pulse ? 'animate-icon-pulse' : ''}`}>
+                    <feature.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-3 text-white">{feature.title}</h3>
+                  <p className="text-text-secondary">{feature.description}</p>
+                </Card>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -281,9 +300,15 @@ const Index = () => {
       <section className="py-32 px-6 relative">
         <div className="max-w-6xl mx-auto">
           <div className="glass-card-intense p-12 text-center">
-            <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-8 glow-intense">
-              <Lock className="w-10 h-10 text-white" />
-            </div>
+            <motion.div 
+              className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-8 glow-intense"
+              initial={{ scale: 0, rotate: -180 }}
+              whileInView={{ scale: 1, rotate: 0 }}
+              transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+              viewport={{ once: true }}
+            >
+              <Lock className="w-10 h-10 text-white animate-rotate-shield" />
+            </motion.div>
             
             <h2 className="text-4xl font-bold mb-6">
               <span className="text-gradient">Security & Privacy First</span>
@@ -295,29 +320,26 @@ const Index = () => {
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mt-12">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="w-8 h-8 text-green-500" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">End-to-End Encryption</h3>
-                <p className="text-text-muted">All data encrypted in transit and at rest</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Eye className="w-8 h-8 text-blue-500" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Transparent Controls</h3>
-                <p className="text-text-muted">Users see exactly what's being monitored</p>
-              </div>
-              
-              <div className="text-center">
-                <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-8 h-8 text-purple-500" />
-                </div>
-                <h3 className="text-lg font-semibold text-white mb-2">User Consent</h3>
-                <p className="text-text-muted">Explicit consent required for all monitoring</p>
-              </div>
+              {[
+                { icon: Shield, color: 'green', title: 'End-to-End Encryption', desc: 'All data encrypted in transit and at rest' },
+                { icon: Eye, color: 'blue', title: 'Transparent Controls', desc: 'Users see exactly what\'s being monitored' },
+                { icon: Users, color: 'purple', title: 'User Consent', desc: 'Explicit consent required for all monitoring' }
+              ].map((item, index) => (
+                <motion.div 
+                  key={index}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className={`w-16 h-16 bg-${item.color}-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4`}>
+                    <item.icon className={`w-8 h-8 text-${item.color}-500`} />
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-2">{item.title}</h3>
+                  <p className="text-text-muted">{item.desc}</p>
+                </motion.div>
+              ))}
             </div>
           </div>
         </div>
