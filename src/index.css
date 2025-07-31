@@ -244,55 +244,6 @@
       box-shadow: 0 0 0 1px hsl(var(--primary) / 0.4), 0 0 40px hsl(var(--primary) / 0.5);
     }
   }
-
-  @keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-  }
-
-  @keyframes highlight-swipe {
-    0% { width: 0%; }
-    100% { width: 100%; }
-  }
-
-  @keyframes stagger-fade-up {
-    from {
-      opacity: 0;
-      transform: translateY(50px) scale(0.95);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0) scale(1);
-    }
-  }
-
-  @keyframes rotate-shield {
-    0% { transform: rotate(0deg) scale(1); }
-    25% { transform: rotate(5deg) scale(1.05); }
-    50% { transform: rotate(0deg) scale(1.1); }
-    75% { transform: rotate(-5deg) scale(1.05); }
-    100% { transform: rotate(0deg) scale(1); }
-  }
-
-  @keyframes bar-fill {
-    from { width: 0%; }
-    to { width: var(--target-width); }
-  }
-
-  @keyframes line-draw {
-    from { stroke-dashoffset: 1000; }
-    to { stroke-dashoffset: 0; }
-  }
-
-  @keyframes counter-up {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-  }
-
-  @keyframes icon-pulse {
-    0%, 100% { transform: scale(1); opacity: 1; }
-    50% { transform: scale(1.1); opacity: 0.8; }
-  }
   
   .animate-fadeInUp {
     animation: fadeInUp 0.6s ease-out;
@@ -304,71 +255,6 @@
   
   .animate-pulse-glow {
     animation: pulse-glow 2s ease-in-out infinite;
-  }
-
-  .animate-stagger-fade-up {
-    animation: stagger-fade-up 0.8s ease-out;
-  }
-
-  .animate-rotate-shield {
-    animation: rotate-shield 3s ease-in-out infinite;
-  }
-
-  .animate-icon-pulse {
-    animation: icon-pulse 2s ease-in-out infinite;
-  }
-
-  /* Typewriter effect */
-  .typewriter {
-    overflow: hidden;
-    white-space: nowrap;
-    animation: typewriter 2s steps(40, end);
-  }
-
-  /* Highlight swipe effect */
-  .highlight-swipe {
-    position: relative;
-    display: inline-block;
-  }
-
-  .highlight-swipe::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 40%;
-    background: linear-gradient(90deg, transparent, hsl(var(--primary) / 0.3), transparent);
-    animation: highlight-swipe 2s ease-out;
-    z-index: -1;
-  }
-
-  /* Enhanced card hover effects */
-  .card-hover-glow {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .card-hover-glow:hover {
-    transform: scale(1.02) translateY(-4px);
-    box-shadow: 
-      0 0 0 1px hsl(var(--primary) / 0.3),
-      0 0 40px hsl(var(--primary) / 0.4),
-      0 25px 50px -12px hsl(240 10% 3.9% / 0.4);
-  }
-
-  /* Parallax container */
-  .parallax-container {
-    transform-style: preserve-3d;
-    perspective: 1000px;
-  }
-
-  /* Bar chart animation */
-  .animate-bar-fill {
-    animation: bar-fill 2s ease-out forwards;
-  }
-
-  /* Counter animation */
-  .animate-counter {
-    animation: counter-up 1s ease-out;
   }
   
   /* Perspective utilities */

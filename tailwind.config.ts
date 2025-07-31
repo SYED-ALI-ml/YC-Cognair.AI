@@ -134,29 +134,6 @@ export default {
 				'spin-slow': {
 					from: { transform: 'rotate(0deg)' },
 					to: { transform: 'rotate(360deg)' }
-				},
-				'stagger-fade-up': {
-					from: { opacity: '0', transform: 'translateY(50px) scale(0.95)' },
-					to: { opacity: '1', transform: 'translateY(0) scale(1)' }
-				},
-				'rotate-shield': {
-					'0%': { transform: 'rotate(0deg) scale(1)' },
-					'25%': { transform: 'rotate(5deg) scale(1.05)' },
-					'50%': { transform: 'rotate(0deg) scale(1.1)' },
-					'75%': { transform: 'rotate(-5deg) scale(1.05)' },
-					'100%': { transform: 'rotate(0deg) scale(1)' }
-				},
-				'icon-pulse': {
-					'0%, 100%': { transform: 'scale(1)', opacity: '1' },
-					'50%': { transform: 'scale(1.1)', opacity: '0.8' }
-				},
-				'bar-fill': {
-					from: { width: '0%' },
-					to: { width: 'var(--target-width)' }
-				},
-				'counter-up': {
-					from: { transform: 'translateY(20px)', opacity: '0' },
-					to: { transform: 'translateY(0)', opacity: '1' }
 				}
 			},
 			animation: {
@@ -167,11 +144,6 @@ export default {
 				'slideInRight': 'slideInRight 0.6s ease-out',
 				'pulse-glow': 'pulse-glow 2s ease-in-out infinite',
 				'spin-slow': 'spin-slow 8s linear infinite',
-				'stagger-fade-up': 'stagger-fade-up 0.8s ease-out',
-				'rotate-shield': 'rotate-shield 3s ease-in-out infinite',
-				'icon-pulse': 'icon-pulse 2s ease-in-out infinite',
-				'bar-fill': 'bar-fill 2s ease-out forwards',
-				'counter-up': 'counter-up 1s ease-out',
 			}
 		}
 	},
