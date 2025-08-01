@@ -426,9 +426,9 @@ const Privacy = () => {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="h-px w-full bg-gradient-to-r from-transparent via-glass-border to-transparent mb-12" />
           
-          <div className="grid md:grid-cols-4 gap-8 mb-12">
+          <div className="grid md:grid-cols-2 gap-12 mb-12">
             {/* Logo & Description */}
-            <div className="md:col-span-2">
+            <div>
               <div className="flex items-center gap-3 mb-4">
                 <img 
                   src="/android-chrome-192x192.png" 
@@ -440,17 +440,6 @@ const Privacy = () => {
               <p className="text-text-secondary leading-relaxed">
                 Building the future of remote work transparency with privacy and trust at the core.
               </p>
-            </div>
-
-            {/* Privacy Links */}
-            <div>
-              <h4 className="text-lg font-semibold text-white mb-4">Privacy</h4>
-              <div className="space-y-2">
-                <a href="#" className="block text-text-secondary hover:text-white transition-colors">Privacy Policy</a>
-                <a href="#" className="block text-text-secondary hover:text-white transition-colors">Terms of Service</a>
-                <a href="#" className="block text-text-secondary hover:text-white transition-colors">Data Processing</a>
-                <a href="#" className="block text-text-secondary hover:text-white transition-colors">Cookie Policy</a>
-              </div>
             </div>
 
             {/* Contact */}
@@ -466,7 +455,7 @@ const Privacy = () => {
 
           <div className="text-center pt-8 border-t border-glass-border">
             <p className="text-text-muted">
-              © 2024 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued. • Privacy Protected.
+              © 2025 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued. • Privacy Protected.
             </p>
           </div>
         </div>

@@ -372,7 +372,7 @@ const Index = () => {
                             <h3 className="text-2xl font-bold text-gradient">Cognaire.AI</h3>
           </div>
           <p className="text-text-muted">
-                          © 2024 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued.
+                          © 2025 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued.
           </p>
         </div>
       </footer>
