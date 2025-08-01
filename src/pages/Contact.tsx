@@ -136,7 +136,7 @@ const Contact = () => {
       {/* Founders Section */}
       <section className="py-28 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/90 pointer-events-none" />
-        <div className="max-w-7xl mx-auto relative z-10">
+        <div className="max-w-7xl mx-auto relative z-10 px-4">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -145,7 +145,7 @@ const Contact = () => {
             className="text-center mb-16"
           >
             <motion.h2 
-              className="text-4xl md:text-5xl font-bold mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight px-2"
               variants={fadeInUp}
             >
               Meet the <span className="text-gradient">Founders</span>
@@ -235,7 +235,7 @@ const Contact = () => {
       {/* Contact Form Section */}
       <section className="py-32 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10 pb-16">
+        <div className="max-w-4xl mx-auto relative z-10 pb-16 px-4">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -243,7 +243,7 @@ const Contact = () => {
             variants={staggerContainer}
           >
             <motion.div className="text-center mb-12" variants={fadeInUp}>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight px-2">
                 Send Us a <span className="text-gradient">Message</span>
               </h2>
               <p className="text-xl text-text-secondary">
