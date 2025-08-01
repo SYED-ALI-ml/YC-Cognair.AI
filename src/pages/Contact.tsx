@@ -86,6 +86,8 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background custom-scrollbar overflow-x-hidden">
+      {/* Ensure no content clipping */}
+      <div className="w-full">
       {/* Navigation */}
       <Navigation />
       
@@ -93,7 +95,7 @@ const Contact = () => {
       <div className="fixed inset-0 mesh-gradient pointer-events-none" />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center px-6 pt-20">
+      <section className="relative min-h-[70vh] flex items-center justify-center px-6 pt-24 md:pt-32">
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <motion.div
             initial="hidden"
@@ -132,7 +134,7 @@ const Contact = () => {
       </section>
 
       {/* Founders Section */}
-      <section className="py-24 px-6 relative">
+      <section className="py-28 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 to-background/90 pointer-events-none" />
         <div className="max-w-7xl mx-auto relative z-10">
           <motion.div
@@ -231,9 +233,9 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-24 px-6 relative">
+      <section className="py-32 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background pointer-events-none" />
-        <div className="max-w-4xl mx-auto relative z-10">
+        <div className="max-w-4xl mx-auto relative z-10 pb-16">
           <motion.div
             initial="hidden"
             whileInView="visible"
@@ -250,11 +252,11 @@ const Contact = () => {
             </motion.div>
 
             <motion.div variants={fadeInUp}>
-              <Card className="glass-card-intense p-8">
-                <form onSubmit={handleSubmit} className="space-y-6">
+              <Card className="glass-card-intense p-8 md:p-12 border border-white/20">
+                <form onSubmit={handleSubmit} className="space-y-8">
                   {/* Full Name */}
                   <div>
-                    <label htmlFor="fullName" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="fullName" className="block text-sm md:text-base font-medium text-white mb-3">
                       Full Name *
                     </label>
                     <div className="relative">
@@ -266,7 +268,7 @@ const Contact = () => {
                         value={formData.fullName}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                        className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary focus:bg-white/15 transition-all duration-300"
                         placeholder="Enter your full name"
                       />
                     </div>
@@ -274,7 +276,7 @@ const Contact = () => {
 
                   {/* Email */}
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="email" className="block text-sm md:text-base font-medium text-white mb-3">
                       Email Address *
                     </label>
                     <div className="relative">
@@ -286,7 +288,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleInputChange}
                         required
-                        className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"
+                        className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary focus:bg-white/15 transition-all duration-300"
                         placeholder="Enter your email address"
                       />
                     </div>
@@ -294,7 +296,7 @@ const Contact = () => {
 
                   {/* Message */}
                   <div>
-                    <label htmlFor="message" className="block text-sm font-medium text-white mb-2">
+                    <label htmlFor="message" className="block text-sm md:text-base font-medium text-white mb-3">
                       Message *
                     </label>
                     <div className="relative">
@@ -306,14 +308,14 @@ const Contact = () => {
                         onChange={handleInputChange}
                         required
                         rows={5}
-                        className="w-full pl-10 pr-4 py-3 bg-white/5 border border-white/20 rounded-lg text-white placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 resize-none"
+                        className="w-full pl-10 pr-4 py-3 bg-white/10 border border-white/30 rounded-lg text-white placeholder-text-secondary focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary focus:bg-white/15 transition-all duration-300 resize-none"
                         placeholder="Tell us about your project, question, or how we can help..."
                       />
                     </div>
                   </div>
 
                   {/* Submit Button */}
-                  <div className="pt-4">
+                  <div className="pt-6">
                     <Button 
                       type="submit" 
                       className="btn-primary-nav w-full py-4 text-lg font-semibold group"
@@ -388,6 +390,7 @@ const Contact = () => {
           </div>
         </div>
       </footer>
+      </div>
     </div>
   );
 };
