@@ -145,11 +145,11 @@ const Contact = () => {
             className="text-center mb-16 w-full"
           >
             <motion.h2 
-              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-center w-full"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-center w-full text-white"
               variants={fadeInUp}
               style={{ minWidth: 'fit-content' }}
             >
-              Meet the <span className="text-gradient">Founders</span>
+              Meet the <span className="text-electric">Founders</span>
             </motion.h2>
             <motion.p 
               className="text-xl text-text-secondary max-w-3xl mx-auto"
@@ -246,10 +246,10 @@ const Contact = () => {
           >
             <motion.div className="text-center mb-12 w-full" variants={fadeInUp}>
               <h2 
-                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-center w-full"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-center w-full text-white"
                 style={{ minWidth: 'fit-content' }}
               >
-                Send Us a <span className="text-gradient">Message</span>
+                Send Us a <span className="text-electric">Message</span>
               </h2>
               <p className="text-xl text-text-secondary">
                 Have a question or want to collaborate? We'd love to hear from you.
