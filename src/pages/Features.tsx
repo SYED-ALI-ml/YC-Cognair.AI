@@ -471,36 +471,33 @@ const Features = () => {
               className="text-5xl font-bold mb-6"
               variants={fadeInUp}
             >
-              Ready to Transform Your
+              Building the Future of
               <br />
-              <span className="text-electric">Team's Productivity?</span>
+              <span className="text-electric">Work Intelligence</span>
             </motion.h2>
             
             <motion.p 
               className="text-xl text-text-secondary mb-12"
               variants={fadeInUp}
             >
-              Join forward-thinking organizations using Replete to build transparent, productive teams.
+              We're creating the infrastructure layer that brings transparency to distributed work—enabling productivity measurement without surveillance, accountability without anxiety.
             </motion.p>
             
             <motion.div 
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center"
+              className="max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              <Button className="btn-primary text-lg px-12 py-6">
-                Start Free Trial
-              </Button>
-              <Button variant="outline" className="btn-ghost text-lg px-12 py-6">
-                Schedule Demo
-              </Button>
+              <div className="glass-card-intense p-8">
+                <h3 className="text-2xl font-bold text-white mb-4">
+                  🚀 YC S25 Mission
+                </h3>
+                <p className="text-lg text-text-secondary leading-relaxed">
+                  Replete is redefining how organizations understand productivity in the hybrid era. 
+                  We're building AI-powered work intelligence that respects privacy while delivering 
+                  unprecedented insights into team performance and engagement.
+                </p>
+              </div>
             </motion.div>
-            
-            <motion.p 
-              className="text-sm text-text-muted mt-8"
-              variants={fadeInUp}
-            >
-              No credit card required • 14-day free trial • Enterprise ready
-            </motion.p>
           </motion.div>
         </div>
       </section>
