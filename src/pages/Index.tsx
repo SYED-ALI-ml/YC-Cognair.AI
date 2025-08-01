@@ -37,8 +37,8 @@ const Index = () => {
       <div className="float absolute top-20 left-10 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
         <div className="glass-card p-4 max-w-xs">
           <div className="flex items-center gap-3">
-            <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-            <span className="text-sm text-text-secondary">Active Time: 7h 23m</span>
+            <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
+            <span className="text-sm text-text-secondary">Status: Pre-MVP</span>
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@ const Index = () => {
         <div className="glass-card p-4 max-w-xs">
           <div className="flex items-center gap-3">
             <BarChart3 className="w-4 h-4 text-primary" />
-            <span className="text-sm text-text-secondary">App Usage: Coding 89%</span>
+            <span className="text-sm text-text-secondary">Target Market: $50B</span>
           </div>
         </div>
       </div>
@@ -56,7 +56,7 @@ const Index = () => {
         <div className="glass-card p-4 max-w-xs">
           <div className="flex items-center gap-3">
             <AlertTriangle className="w-4 h-4 text-yellow-500" />
-            <span className="text-sm text-text-secondary">Idle Alert: 2 min break</span>
+            <span className="text-sm text-text-secondary">Problem: $15k/year lost per remote worker</span>
           </div>
         </div>
       </div>
@@ -65,7 +65,7 @@ const Index = () => {
         <div className="glass-card p-4 max-w-xs">
           <div className="flex items-center gap-3">
             <Camera className="w-4 h-4 text-blue-500" />
-            <span className="text-sm text-text-secondary">Screenshots: 47 today</span>
+            <span className="text-sm text-text-secondary">YC S25 Batch</span>
           </div>
         </div>
       </div>
@@ -101,7 +101,7 @@ const Index = () => {
         
         <div className="relative z-10 text-center max-w-6xl mx-auto">
           <Badge className="mb-6 bg-primary/20 text-primary border-primary/30 animate-pulse-glow">
-            🚀 Now in Private Beta
+            🚀 YC S25 Startup • Seeking Seed Funding
           </Badge>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
@@ -119,18 +119,18 @@ const Index = () => {
           </h1>
           
           <p className="text-xl md:text-2xl text-text-secondary mb-12 max-w-3xl mx-auto leading-relaxed">
-            Transform remote productivity with intelligent screen monitoring. 
-            Real-time insights, automated alerts, and seamless integration 
-            for the modern workplace.
+            We're building the future of remote work transparency. 
+            Our vision: intelligent productivity monitoring that respects privacy 
+            while delivering actionable insights for distributed teams.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button className="btn-primary group">
-              Get a Demo
+              Join Waitlist
               <Play className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="outline" className="btn-ghost group">
-              Watch How It Works
+              Learn More
               <Eye className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
             </Button>
           </div>
@@ -147,10 +147,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6">
-              <span className="text-gradient">How It Works</span>
+              <span className="text-gradient">Our Vision</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-              Three simple steps to transform your team's productivity insights
+              How we plan to solve remote work productivity challenges
             </p>
           </div>
           
@@ -162,10 +162,10 @@ const Index = () => {
                     <Monitor className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-white">Silent Monitoring</h3>
+                    <h3 className="text-2xl font-semibold mb-3 text-white">Privacy-First Monitoring</h3>
                     <p className="text-text-secondary">
-                      Lightweight agent runs seamlessly in the background, capturing screen activity 
-                      without impacting performance or workflow.
+                      We're designing a lightweight system that captures meaningful productivity data 
+                      while respecting user privacy and maintaining trust.
                     </p>
                   </div>
                 </div>
@@ -177,10 +177,10 @@ const Index = () => {
                     <Activity className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-white">Real-Time Analytics</h3>
+                    <h3 className="text-2xl font-semibold mb-3 text-white">AI-Powered Analytics</h3>
                     <p className="text-text-secondary">
-                      AI-powered analysis provides instant insights into app usage, 
-                      active time, and productivity patterns.
+                      Our planned ML algorithms will analyze work patterns and provide 
+                      actionable insights without compromising employee autonomy.
                     </p>
                   </div>
                 </div>
@@ -192,10 +192,10 @@ const Index = () => {
                     <TrendingUp className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-semibold mb-3 text-white">Actionable Insights</h3>
+                    <h3 className="text-2xl font-semibold mb-3 text-white">Team Intelligence</h3>
                     <p className="text-text-secondary">
-                      Smart alerts and detailed reports help teams optimize 
-                      productivity and identify improvement opportunities.
+                      We envision dashboards that help managers support productivity 
+                      without micromanaging, fostering better remote work culture.
                     </p>
                   </div>
                 </div>
@@ -208,8 +208,11 @@ const Index = () => {
                   <div className="w-32 h-32 bg-gradient-primary rounded-full flex items-center justify-center mb-6 mx-auto animate-spin-slow">
                     <Zap className="w-16 h-16 text-white" />
                   </div>
+                  <Badge className="mb-4 bg-yellow-500/20 text-yellow-400 border-yellow-500/30">
+                    In Development
+                  </Badge>
                   <p className="text-text-secondary">
-                    Interactive dashboard preview coming soon
+                    Building our MVP with user-centric design principles
                   </p>
                 </div>
               </div>
@@ -224,10 +227,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6">
-              <span className="text-electric">Powerful Features</span>
+              <span className="text-electric">Planned Features</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-              Everything you need to monitor, analyze, and optimize remote work productivity
+              Our roadmap for solving remote work productivity challenges
             </p>
           </div>
           
@@ -235,38 +238,38 @@ const Index = () => {
             {[
               {
                 icon: Clock,
-                title: "Time Tracking",
-                description: "Automatic time logging with intelligent categorization of active vs idle periods.",
+                title: "Intelligent Time Tracking",
+                description: "We plan to build automatic, context-aware time logging that respects user privacy while providing meaningful insights.",
                 color: "bg-green-500"
               },
               {
                 icon: BarChart3,
-                title: "App Analytics",
-                description: "Detailed insights into application usage patterns and productivity metrics.",
+                title: "Productivity Analytics",
+                description: "Our vision includes ML-powered analysis of work patterns without compromising employee autonomy.",
                 color: "bg-blue-500"
               },
               {
                 icon: Camera,
-                title: "Screen Captures",
-                description: "Periodic screenshots for visual confirmation of work activities and progress.",
+                title: "Privacy-Safe Monitoring",
+                description: "Developing optional visual confirmation systems with full user control and transparent data handling.",
                 color: "bg-purple-500"
               },
               {
                 icon: AlertTriangle,
-                title: "Smart Alerts",
-                description: "Automated notifications for extended idle time and unusual activity patterns.",
+                title: "Contextual Insights",
+                description: "Planning smart notifications that help rather than distract, with customizable preferences.",
                 color: "bg-yellow-500"
               },
               {
                 icon: Shield,
-                title: "Privacy Controls",
-                description: "Granular privacy settings with secure data encryption and user consent.",
+                title: "Trust-First Architecture",
+                description: "Building from the ground up with privacy, security, and user consent as core principles.",
                 color: "bg-red-500"
               },
               {
                 icon: Users,
-                title: "Team Dashboard",
-                description: "Unified view of team productivity with role-based access controls.",
+                title: "Team Collaboration",
+                description: "Envisioning dashboards that foster better remote work culture without micromanagement.",
                 color: "bg-indigo-500"
               }
             ].map((feature, index) => (
@@ -295,12 +298,12 @@ const Index = () => {
             </div>
             
             <h2 className="text-4xl font-bold mb-6">
-              <span className="text-gradient">Security & Privacy First</span>
+              <span className="text-gradient">Trust & Privacy by Design</span>
             </h2>
             
             <p className="text-xl text-text-secondary mb-8 max-w-3xl mx-auto">
-              Your data security is our top priority. Replete uses enterprise-grade encryption, 
-              complies with GDPR and SOC 2 standards, and gives you complete control over your data.
+              We're building a platform where security and privacy aren't afterthoughts. 
+              Our architecture will prioritize user trust, transparency, and control from day one.
             </p>
             
             <div className="grid md:grid-cols-3 gap-8 mt-12">
@@ -308,24 +311,24 @@ const Index = () => {
                 <div className="w-16 h-16 bg-green-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-500" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">End-to-End Encryption</h3>
-                <p className="text-text-muted">All data encrypted in transit and at rest</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Security-First Development</h3>
+                <p className="text-text-muted">Planning enterprise-grade encryption and compliance standards</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Eye className="w-8 h-8 text-blue-500" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">Transparent Controls</h3>
-                <p className="text-text-muted">Users see exactly what's being monitored</p>
+                <h3 className="text-lg font-semibold text-white mb-2">Radical Transparency</h3>
+                <p className="text-text-muted">Users will always know what data we collect and why</p>
               </div>
               
               <div className="text-center">
                 <div className="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <Users className="w-8 h-8 text-purple-500" />
                 </div>
-                <h3 className="text-lg font-semibold text-white mb-2">User Consent</h3>
-                <p className="text-text-muted">Explicit consent required for all monitoring</p>
+                <h3 className="text-lg font-semibold text-white mb-2">User-Controlled Data</h3>
+                <p className="text-text-muted">Designing granular controls for data collection and retention</p>
               </div>
             </div>
           </div>
@@ -337,26 +340,27 @@ const Index = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background pointer-events-none" />
         <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-5xl font-bold mb-6">
-            Ready to Transform Your
+            Join Our Mission to
             <br />
-            <span className="text-electric">Remote Productivity?</span>
+            <span className="text-electric">Revolutionize Remote Work</span>
           </h2>
           
           <p className="text-xl text-text-secondary mb-12">
-            Join forward-thinking companies already using Replete to optimize their remote teams.
+            We're seeking early users, advisors, and investors who share our vision 
+            for transparent, trust-based remote work solutions.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button className="btn-primary text-lg px-12 py-6">
-              Start Free Trial
+              Join Waitlist
             </Button>
             <Button variant="outline" className="btn-ghost text-lg px-12 py-6">
-              Schedule Demo
+              Partner With Us
             </Button>
           </div>
           
           <p className="text-sm text-text-muted mt-8">
-            No credit card required • 14-day free trial • Enterprise ready
+            Early access • Shape our roadmap • Investor opportunities
           </p>
         </div>
       </section>
@@ -375,7 +379,7 @@ const Index = () => {
             <h3 className="text-2xl font-bold text-gradient">Replete</h3>
           </div>
           <p className="text-text-muted">
-            © 2024 Replete. All rights reserved. • Work Seen. Time Valued.
+            © 2024 Replete. YC S25 Startup. • Work Seen. Time Valued.
           </p>
         </div>
       </footer>

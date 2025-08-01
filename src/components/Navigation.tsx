@@ -44,27 +44,27 @@ const Navigation = () => {
               className="text-text-secondary hover:text-white transition-colors"
               whileHover={{ y: -2 }}
             >
-              Features
+              Vision
             </motion.a>
             <motion.a 
               href="#security" 
               className="text-text-secondary hover:text-white transition-colors"
               whileHover={{ y: -2 }}
             >
-              Security
+              Privacy
             </motion.a>
             <motion.a 
-              href="#pricing" 
+              href="#about" 
               className="text-text-secondary hover:text-white transition-colors"
               whileHover={{ y: -2 }}
             >
-              Pricing
+              YC S25
             </motion.a>
             <Button variant="ghost" size="sm">
-              Sign In
+              Contact
             </Button>
             <Button variant="primary" size="sm">
-              Get Started
+              Join Waitlist
             </Button>
           </div>
           
@@ -87,20 +87,20 @@ const Navigation = () => {
             className="md:hidden mt-4 pb-4 space-y-4"
           >
             <a href="#features" className="block text-text-secondary hover:text-white transition-colors">
-              Features
+              Vision
             </a>
             <a href="#security" className="block text-text-secondary hover:text-white transition-colors">
-              Security
+              Privacy
             </a>
-            <a href="#pricing" className="block text-text-secondary hover:text-white transition-colors">
-              Pricing
+            <a href="#about" className="block text-text-secondary hover:text-white transition-colors">
+              YC S25
             </a>
             <div className="flex flex-col space-y-2 pt-4">
               <Button variant="ghost" size="sm">
-                Sign In
+                Contact
               </Button>
               <Button variant="primary" size="sm">
-                Get Started
+                Join Waitlist
               </Button>
             </div>
           </motion.div>
