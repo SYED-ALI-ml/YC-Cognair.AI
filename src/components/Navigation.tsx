@@ -59,13 +59,14 @@ const Navigation = () => {
                 Privacy
               </motion.span>
             </Link>
-            <motion.a 
-              href={location.pathname === '/' ? "#features" : "/#features"} 
-              className="text-text-secondary hover:text-white transition-colors"
-              whileHover={{ y: -2 }}
-            >
-              Features
-            </motion.a>
+            <Link to="/features">
+              <motion.span 
+                className={`text-text-secondary hover:text-white transition-colors ${location.pathname === '/features' ? 'text-primary' : ''}`}
+                whileHover={{ y: -2 }}
+              >
+                Features
+              </motion.span>
+            </Link>
             <Button variant="ghost" size="sm">
               Contact
             </Button>
@@ -98,9 +99,9 @@ const Navigation = () => {
             <Link to="/privacy" className={`block text-text-secondary hover:text-white transition-colors ${location.pathname === '/privacy' ? 'text-primary' : ''}`}>
               Privacy
             </Link>
-            <a href={location.pathname === '/' ? "#features" : "/#features"} className="block text-text-secondary hover:text-white transition-colors">
+            <Link to="/features" className={`block text-text-secondary hover:text-white transition-colors ${location.pathname === '/features' ? 'text-primary' : ''}`}>
               Features
-            </a>
+            </Link>
             <div className="flex flex-col space-y-2 pt-4">
               <Button variant="ghost" size="sm">
                 Contact
