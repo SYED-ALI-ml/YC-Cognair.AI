@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Menu, X } from 'lucide-react';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -25,40 +27,43 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div 
-            className="flex items-center gap-3"
-            whileHover={{ scale: 1.05 }}
-          >
-            <img 
-              src="/android-chrome-192x192.png" 
-              alt="Replete Logo" 
-              className="w-8 h-8"
-            />
-            <span className="text-2xl font-bold text-gradient">Replete</span>
-          </motion.div>
+          <Link to="/">
+            <motion.div 
+              className="flex items-center gap-3"
+              whileHover={{ scale: 1.05 }}
+            >
+              <img 
+                src="/android-chrome-192x192.png" 
+                alt="Replete Logo" 
+                className="w-8 h-8"
+              />
+              <span className="text-2xl font-bold text-gradient">Replete</span>
+            </motion.div>
+          </Link>
           
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
+            <Link to="/vision">
+              <motion.span 
+                className={`text-text-secondary hover:text-white transition-colors ${location.pathname === '/vision' ? 'text-primary' : ''}`}
+                whileHover={{ y: -2 }}
+              >
+                Vision
+              </motion.span>
+            </Link>
             <motion.a 
-              href="#features" 
-              className="text-text-secondary hover:text-white transition-colors"
-              whileHover={{ y: -2 }}
-            >
-              Vision
-            </motion.a>
-            <motion.a 
-              href="#security" 
+              href={location.pathname === '/' ? "#security" : "/#security"} 
               className="text-text-secondary hover:text-white transition-colors"
               whileHover={{ y: -2 }}
             >
               Privacy
             </motion.a>
             <motion.a 
-              href="#about" 
+              href={location.pathname === '/' ? "#features" : "/#features"} 
               className="text-text-secondary hover:text-white transition-colors"
               whileHover={{ y: -2 }}
             >
-              YC S25
+              Features
             </motion.a>
             <Button variant="ghost" size="sm">
               Contact
@@ -86,14 +91,14 @@ const Navigation = () => {
             exit={{ opacity: 0, height: 0 }}
             className="md:hidden mt-4 pb-4 space-y-4"
           >
-            <a href="#features" className="block text-text-secondary hover:text-white transition-colors">
+            <Link to="/vision" className={`block text-text-secondary hover:text-white transition-colors ${location.pathname === '/vision' ? 'text-primary' : ''}`}>
               Vision
-            </a>
-            <a href="#security" className="block text-text-secondary hover:text-white transition-colors">
+            </Link>
+            <a href={location.pathname === '/' ? "#security" : "/#security"} className="block text-text-secondary hover:text-white transition-colors">
               Privacy
             </a>
-            <a href="#about" className="block text-text-secondary hover:text-white transition-colors">
-              YC S25
+            <a href={location.pathname === '/' ? "#features" : "/#features"} className="block text-text-secondary hover:text-white transition-colors">
+              Features
             </a>
             <div className="flex flex-col space-y-2 pt-4">
               <Button variant="ghost" size="sm">
