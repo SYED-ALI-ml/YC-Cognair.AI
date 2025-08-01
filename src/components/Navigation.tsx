@@ -26,10 +26,15 @@ const Navigation = () => {
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <motion.div 
-            className="text-2xl font-bold text-gradient"
+            className="flex items-center gap-3"
             whileHover={{ scale: 1.05 }}
           >
-            Replete
+            <img 
+              src="/android-chrome-192x192.png" 
+              alt="Replete Logo" 
+              className="w-8 h-8"
+            />
+            <span className="text-2xl font-bold text-gradient">Replete</span>
           </motion.div>
           
           {/* Desktop Navigation */}

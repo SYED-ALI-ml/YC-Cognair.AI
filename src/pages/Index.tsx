@@ -105,9 +105,15 @@ const Index = () => {
           </Badge>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-            <span className="text-gradient">Replete:</span>
-            <br />
-            <span className="text-white">Work Seen.</span>
+            <div className="flex items-center justify-center gap-4 mb-4">
+              <img 
+                src="/android-chrome-192x192.png" 
+                alt="Replete Logo" 
+                className="w-16 h-16 md:w-20 md:h-20"
+              />
+              <span className="text-gradient">Replete:</span>
+            </div>
+            <span className="text-white block">Work Seen.</span>
             <br />
             <span className="text-electric">Time Valued.</span>
           </h1>
@@ -136,8 +142,9 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-32 px-6 relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-16 px-6 relative -mt-16">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6">
               <span className="text-gradient">How It Works</span>
@@ -212,8 +219,9 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-32 px-6 relative">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-20 px-6 relative -mt-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background to-background/90 pointer-events-none" />
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-bold mb-6">
               <span className="text-electric">Powerful Features</span>
@@ -278,8 +286,9 @@ const Index = () => {
       </section>
 
       {/* Security Section */}
-      <section className="py-32 px-6 relative">
-        <div className="max-w-6xl mx-auto">
+      <section className="py-20 px-6 relative -mt-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/70 via-background/90 to-background pointer-events-none" />
+        <div className="max-w-6xl mx-auto relative z-10">
           <div className="glass-card-intense p-12 text-center">
             <div className="w-20 h-20 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-8 glow-intense">
               <Lock className="w-10 h-10 text-white" />
@@ -324,8 +333,9 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-32 px-6 relative">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="py-20 px-6 relative -mt-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 to-background pointer-events-none" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
           <h2 className="text-5xl font-bold mb-6">
             Ready to Transform Your
             <br />
@@ -352,9 +362,18 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-glass-border py-12 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h3 className="text-2xl font-bold text-gradient mb-4">Replete</h3>
+      <footer className="py-12 px-6 relative -mt-8">
+        <div className="absolute inset-0 bg-gradient-to-b from-background/40 to-background-secondary pointer-events-none" />
+        <div className="max-w-6xl mx-auto text-center relative z-10">
+          <div className="h-px w-full bg-gradient-to-r from-transparent via-glass-border to-transparent mb-8" />
+          <div className="flex items-center justify-center gap-3 mb-4">
+            <img 
+              src="/android-chrome-192x192.png" 
+              alt="Replete Logo" 
+              className="w-8 h-8"
+            />
+            <h3 className="text-2xl font-bold text-gradient">Replete</h3>
+          </div>
           <p className="text-text-muted">
             © 2024 Replete. All rights reserved. • Work Seen. Time Valued.
           </p>

@@ -137,6 +137,12 @@
     box-shadow: var(--shadow-lg);
   }
   
+  .glass-card:hover {
+    background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.95), hsl(var(--glass-bg) / 0.7));
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+  }
+  
   .glass-card-intense {
     @apply glass-card;
     background: linear-gradient(135deg, hsl(var(--glass-bg) / 0.9), hsl(var(--glass-bg) / 0.6));
@@ -160,8 +166,11 @@
   
   /* Buttons */
   .btn-primary {
-    @apply bg-primary text-primary-foreground rounded-full px-8 py-4 font-semibold transition-all duration-300;
-    box-shadow: var(--shadow-glow);
+    @apply bg-primary text-white rounded-full px-8 py-4 font-semibold transition-all duration-300;
+    background: linear-gradient(135deg, hsl(250, 100%, 70%), hsl(270, 100%, 75%)) !important;
+    color: white !important;
+    box-shadow: 0 0 30px hsl(250, 100%, 70%) !important;
+    border: none !important;
   }
   
   .btn-primary:hover {
@@ -172,6 +181,8 @@
   .btn-ghost {
     @apply bg-white/5 text-white border border-white/20 rounded-full px-8 py-4 font-semibold transition-all duration-300;
     backdrop-filter: blur(12px);
+    color: white;
+    border-color: rgba(255, 255, 255, 0.3);
   }
   
   .btn-ghost:hover {
@@ -182,6 +193,15 @@
   /* Mesh gradient background */
   .mesh-gradient {
     background: var(--gradient-mesh);
+  }
+  
+  /* Seamless section transitions */
+  .section-transition {
+    background: linear-gradient(180deg, transparent 0%, hsl(var(--background) / 0.2) 20%, hsl(var(--background) / 0.8) 80%, hsl(var(--background)) 100%);
+  }
+  
+  .section-overlay {
+    background: linear-gradient(180deg, transparent 0%, hsl(var(--background) / 0.3) 30%, hsl(var(--background) / 0.9) 100%);
   }
   
   /* Floating animation */
@@ -207,12 +227,16 @@
   /* Custom animations */
   @keyframes float {
     0%, 100% {
-      transform: translateY(0px);
+      transform: translateY(0px) scale(1);
     }
     50% {
-      transform: translateY(-20px);
+      transform: translateY(-20px) scale(1.02);
     }
   }
+  
+
+  
+
   
   @keyframes fadeInUp {
     from {
@@ -257,6 +281,66 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
   
+  .animate-prototype-pulse {
+    animation: prototype-pulse 3s ease-in-out infinite;
+  }
+  
+
+  
+  .animate-particle-float {
+    animation: particle-float 8s ease-in-out infinite;
+  }
+  
+  .animate-gradient-shift {
+    background-size: 200% 200%;
+    animation: gradient-shift 4s ease infinite;
+  }
+  
+  .animate-card-entrance {
+    animation: card-entrance 0.8s ease-out forwards;
+  }
+  
+  .animate-glow-pulse {
+    animation: glow-pulse 2s ease-in-out infinite;
+  }
+  
+  .animate-typing {
+    overflow: hidden;
+    border-right: 2px solid hsl(var(--primary));
+    white-space: nowrap;
+    animation: typing 3s steps(40, end), blink 0.75s step-end infinite;
+  }
+  
+  /* 3D hover effects */
+  .card-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-3d:hover {
+    transform: rotateY(5deg) rotateX(5deg) translateZ(10px);
+  }
+  
+  /* Magnetic button effect */
+  .magnetic-btn {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .magnetic-btn:hover {
+    transform: translateZ(10px);
+  }
+  
+  /* Parallax scrolling */
+  .parallax {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+
+  
+
+  
   /* Perspective utilities */
   .perspective-1000 {
     perspective: 1000px;
@@ -266,20 +350,20 @@
     transform-style: preserve-3d;
   }
   
-  /* Scrollbar styling */
+    /* Scrollbar styling */
   .custom-scrollbar::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   .custom-scrollbar::-webkit-scrollbar-track {
     background: hsl(var(--background-secondary));
   }
-  
+
   .custom-scrollbar::-webkit-scrollbar-thumb {
     background: hsl(var(--primary) / 0.5);
     border-radius: 3px;
   }
-  
+
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--primary) / 0.7);
   }
