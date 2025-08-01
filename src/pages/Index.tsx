@@ -91,7 +91,7 @@ const Index = () => {
           >
             <img 
               src={heroImage} 
-              alt="Replete Dashboard" 
+              alt="Cognaire.AI Dashboard" 
               className="w-full h-full object-cover opacity-30"
             />
           </div>
@@ -105,7 +105,7 @@ const Index = () => {
           </Badge>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-            <span className="text-gradient block">Replete:</span>
+            <span className="text-gradient block">Cognaire.AI:</span>
             <span className="text-white block">Work Seen.</span>
             <br />
             <span className="text-electric">Time Valued.</span>
@@ -364,15 +364,15 @@ const Index = () => {
         <div className="max-w-6xl mx-auto text-center relative z-10">
           <div className="h-px w-full bg-gradient-to-r from-transparent via-glass-border to-transparent mb-8" />
           <div className="flex items-center justify-center gap-3 mb-4">
-            <img 
-              src="/android-chrome-192x192.png" 
-              alt="Replete Logo" 
-              className="w-8 h-8"
-            />
-            <h3 className="text-2xl font-bold text-gradient">Replete</h3>
+                            <img 
+                  src="/android-chrome-192x192.png" 
+                  alt="Cognaire.AI Logo" 
+                  className="w-8 h-8"
+                />
+                            <h3 className="text-2xl font-bold text-gradient">Cognaire.AI</h3>
           </div>
           <p className="text-text-muted">
-            © 2024 Replete. YC S25 Startup. • Work Seen. Time Valued.
+                          © 2024 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued.
           </p>
         </div>
       </footer>

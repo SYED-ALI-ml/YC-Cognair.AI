@@ -34,10 +34,10 @@ const Navigation = () => {
             >
               <img 
                 src="/android-chrome-192x192.png" 
-                alt="Replete Logo" 
+                                  alt="Cognaire.AI Logo" 
                 className="w-8 h-8"
               />
-              <span className="text-2xl font-bold text-gradient">Replete</span>
+                              <span className="text-2xl font-bold text-gradient">Cognaire.AI</span>
             </motion.div>
           </Link>
           

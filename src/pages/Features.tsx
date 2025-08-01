@@ -110,7 +110,7 @@ const Features = () => {
             className="text-xl md:text-2xl text-text-secondary mb-12 max-w-4xl mx-auto leading-relaxed"
             variants={fadeInUp}
           >
-            Replete gives organizations the tools to understand how work happens — without crossing the line. 
+            Cognaire.AI gives organizations the tools to understand how work happens — without crossing the line. 
             Our features are designed to deliver real-time insights, ensure accountability, 
             and support productive, high-trust teams.
           </motion.p>
@@ -220,7 +220,7 @@ const Features = () => {
                 "What Are You Working On?" Prompts
               </h2>
               <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-                Not everything can be tracked — so we ask. Replete sends periodic pop-ups asking users 
+                Not everything can be tracked — so we ask. Cognaire.AI sends periodic pop-ups asking users 
                 to share what they're working on. A 5-minute response window helps us add human context 
                 to system-level insights.
               </p>
@@ -340,7 +340,7 @@ const Features = () => {
                 New Software Detection
               </h2>
               <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-                Replete monitors installation of new applications to help teams catch unauthorized 
+                Cognaire.AI monitors installation of new applications to help teams catch unauthorized 
                 or risky tools before they impact security or compliance. Stay ahead of potential 
                 threats with proactive monitoring.
               </p>
@@ -492,7 +492,7 @@ const Features = () => {
                   🚀 YC S25 Mission
                 </h3>
                 <p className="text-lg text-text-secondary leading-relaxed">
-                  Replete is redefining how organizations understand productivity in the hybrid era. 
+                  Cognaire.AI is redefining how organizations understand productivity in the hybrid era. 
                   We're building AI-powered work intelligence that respects privacy while delivering 
                   unprecedented insights into team performance and engagement.
                 </p>
@@ -514,10 +514,10 @@ const Features = () => {
               <div className="flex items-center gap-3 mb-4">
                 <img 
                   src="/android-chrome-192x192.png" 
-                  alt="Replete Logo" 
+                  alt="Cognaire.AI Logo" 
                   className="w-8 h-8"
                 />
-                <h3 className="text-2xl font-bold text-gradient">Replete</h3>
+                <h3 className="text-2xl font-bold text-gradient">Cognaire.AI</h3>
               </div>
               <p className="text-text-secondary leading-relaxed">
                 Smart visibility for distributed teams. Work seen, time valued, privacy protected.
@@ -539,16 +539,16 @@ const Features = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
               <div className="space-y-2">
-                <a href="mailto:hello@replete.ai" className="block text-text-secondary hover:text-white transition-colors">hello@replete.ai</a>
-                <a href="mailto:support@replete.ai" className="block text-text-secondary hover:text-white transition-colors">support@replete.ai</a>
-                <a href="mailto:sales@replete.ai" className="block text-text-secondary hover:text-white transition-colors">sales@replete.ai</a>
+                <a href="mailto:hello@cognaire.ai" className="block text-text-secondary hover:text-white transition-colors">hello@cognaire.ai</a>
+                <a href="mailto:support@cognaire.ai" className="block text-text-secondary hover:text-white transition-colors">support@cognaire.ai</a>
+                <a href="mailto:sales@cognaire.ai" className="block text-text-secondary hover:text-white transition-colors">sales@cognaire.ai</a>
               </div>
             </div>
           </div>
 
           <div className="text-center pt-8 border-t border-glass-border">
             <p className="text-text-muted">
-              © 2024 Replete. YC S25 Startup. • Work Seen. Time Valued.
+              © 2024 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued.
             </p>
           </div>
         </div>

@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: replete-website
+    name: cognaire-website
     env: static
     buildCommand: npm run build
     staticPublishPath: ./dist

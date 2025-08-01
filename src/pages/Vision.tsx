@@ -109,7 +109,7 @@ const Vision = () => {
             className="text-2xl md:text-3xl font-semibold text-electric mb-12"
             variants={fadeInUp}
           >
-            Replete is here to restore trust, clarity, and accountability in the modern workplace.
+            Cognaire.AI is here to restore trust, clarity, and accountability in the modern workplace.
           </motion.div>
           
           <motion.div variants={fadeInUp}>
@@ -255,7 +255,7 @@ const Vision = () => {
               </h3>
               
               <p className="text-xl text-text-secondary mb-8 leading-relaxed">
-                Replete isn't just about tracking screens. It's about transforming 
+                Cognaire.AI isn't just about tracking screens. It's about transforming 
                 raw digital activity into meaningful, human-centered insights.
               </p>
             </motion.div>
@@ -463,7 +463,7 @@ const Vision = () => {
               variants={fadeInUp}
             >
               <h3 className="text-2xl font-bold text-white mb-4">
-                We want Replete to become the standard operating system for how modern teams 
+                We want Cognaire.AI to become the standard operating system for how modern teams 
                 understand effort, engagement, and output
               </h3>
               <p className="text-xl text-text-secondary">
@@ -565,13 +565,13 @@ const Vision = () => {
           <div className="flex items-center justify-center gap-3 mb-4">
             <img 
               src="/android-chrome-192x192.png" 
-              alt="Replete Logo" 
+                                alt="Cognaire.AI Logo" 
               className="w-8 h-8"
             />
-            <h3 className="text-2xl font-bold text-gradient">Replete</h3>
+                            <h3 className="text-2xl font-bold text-gradient">Cognaire.AI</h3>
           </div>
           <p className="text-text-muted">
-            © 2024 Replete. YC S25 Startup. • Work Seen. Time Valued.
+                          © 2024 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued.
           </p>
         </div>
       </footer>

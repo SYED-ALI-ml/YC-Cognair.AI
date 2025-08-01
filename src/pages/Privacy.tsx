@@ -110,7 +110,7 @@ const Privacy = () => {
             variants={fadeInUp}
           >
             <p>
-              At Replete, we don't just monitor work — we protect the people doing it.
+              At Cognaire.AI, we don't just monitor work — we protect the people doing it.
             </p>
             <p className="text-electric font-semibold">
               We believe visibility should never come at the cost of trust. 
@@ -165,7 +165,7 @@ const Privacy = () => {
                 Employee Consent First
               </h3>
               <div className="space-y-3 text-text-secondary">
-                <p>Every user is notified, onboarded, and fully aware of how Replete works.</p>
+                <p>Every user is notified, onboarded, and fully aware of how Cognaire.AI works.</p>
                 <p className="text-electric font-semibold">
                   Transparency drives trust — not surveillance.
                 </p>
@@ -305,7 +305,7 @@ const Privacy = () => {
               <span className="text-gradient">Global Standards Alignment</span>
             </h2>
             <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-              Replete aligns with modern privacy and security standards
+              Cognaire.AI aligns with modern privacy and security standards
             </p>
           </motion.div>
 
@@ -432,10 +432,10 @@ const Privacy = () => {
               <div className="flex items-center gap-3 mb-4">
                 <img 
                   src="/android-chrome-192x192.png" 
-                  alt="Replete Logo" 
+                  alt="Cognaire.AI Logo" 
                   className="w-8 h-8"
                 />
-                <h3 className="text-2xl font-bold text-gradient">Replete</h3>
+                <h3 className="text-2xl font-bold text-gradient">Cognaire.AI</h3>
               </div>
               <p className="text-text-secondary leading-relaxed">
                 Building the future of remote work transparency with privacy and trust at the core.
@@ -457,16 +457,16 @@ const Privacy = () => {
             <div>
               <h4 className="text-lg font-semibold text-white mb-4">Contact</h4>
               <div className="space-y-2">
-                <a href="mailto:privacy@replete.ai" className="block text-text-secondary hover:text-white transition-colors">privacy@replete.ai</a>
-                <a href="mailto:security@replete.ai" className="block text-text-secondary hover:text-white transition-colors">security@replete.ai</a>
-                <a href="mailto:legal@replete.ai" className="block text-text-secondary hover:text-white transition-colors">legal@replete.ai</a>
+                <a href="mailto:privacy@cognaire.ai" className="block text-text-secondary hover:text-white transition-colors">privacy@cognaire.ai</a>
+                <a href="mailto:security@cognaire.ai" className="block text-text-secondary hover:text-white transition-colors">security@cognaire.ai</a>
+                <a href="mailto:legal@cognaire.ai" className="block text-text-secondary hover:text-white transition-colors">legal@cognaire.ai</a>
               </div>
             </div>
           </div>
 
           <div className="text-center pt-8 border-t border-glass-border">
             <p className="text-text-muted">
-              © 2024 Replete. YC S25 Startup. • Work Seen. Time Valued. • Privacy Protected.
+              © 2024 Cognaire.AI. YC S25 Startup. • Work Seen. Time Valued. • Privacy Protected.
             </p>
           </div>
         </div>
