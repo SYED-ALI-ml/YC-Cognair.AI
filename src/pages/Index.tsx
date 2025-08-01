@@ -105,14 +105,7 @@ const Index = () => {
           </Badge>
           
           <h1 className="text-6xl md:text-8xl font-bold mb-8 leading-tight">
-            <div className="flex items-center justify-center gap-4 mb-4">
-              <img 
-                src="/android-chrome-192x192.png" 
-                alt="Replete Logo" 
-                className="w-16 h-16 md:w-20 md:h-20"
-              />
-              <span className="text-gradient">Replete:</span>
-            </div>
+            <span className="text-gradient block">Replete:</span>
             <span className="text-white block">Work Seen.</span>
             <br />
             <span className="text-electric">Time Valued.</span>
