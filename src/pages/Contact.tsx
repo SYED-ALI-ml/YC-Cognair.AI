@@ -85,9 +85,9 @@ const Contact = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background custom-scrollbar overflow-x-hidden">
+    <div className="min-h-screen bg-background custom-scrollbar">
       {/* Ensure no content clipping */}
-      <div className="w-full">
+      <div className="w-full overflow-visible">
       {/* Navigation */}
       <Navigation />
       
@@ -142,11 +142,12 @@ const Contact = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
-            className="text-center mb-16"
+            className="text-center mb-16 w-full"
           >
             <motion.h2 
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight px-2"
+              className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-center w-full"
               variants={fadeInUp}
+              style={{ minWidth: 'fit-content' }}
             >
               Meet the <span className="text-gradient">Founders</span>
             </motion.h2>
@@ -241,9 +242,13 @@ const Contact = () => {
             whileInView="visible"
             viewport={{ once: true, margin: "-100px" }}
             variants={staggerContainer}
+            className="w-full"
           >
-            <motion.div className="text-center mb-12" variants={fadeInUp}>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight px-2">
+            <motion.div className="text-center mb-12 w-full" variants={fadeInUp}>
+              <h2 
+                className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 leading-tight text-center w-full"
+                style={{ minWidth: 'fit-content' }}
+              >
                 Send Us a <span className="text-gradient">Message</span>
               </h2>
               <p className="text-xl text-text-secondary">
