@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import Vision from "./pages/Vision";
 import Privacy from "./pages/Privacy";
 import Features from "./pages/Features";
+import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/vision" element={<Vision />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/features" element={<Features />} />
+          <Route path="/contact" element={<Contact />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

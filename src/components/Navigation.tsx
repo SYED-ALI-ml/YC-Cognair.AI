@@ -67,9 +67,15 @@ const Navigation = () => {
                 Features
               </motion.span>
             </Link>
-            <Button variant="ghost" size="sm" className="hover:bg-white/10 hover:border-white/40 transition-all duration-300">
-              Contact
-            </Button>
+            <Link to="/contact">
+              <Button 
+                variant="ghost" 
+                size="sm" 
+                className={`hover:bg-white/10 hover:border-white/40 transition-all duration-300 ${location.pathname === '/contact' ? 'bg-primary/20 text-primary' : ''}`}
+              >
+                Contact
+              </Button>
+            </Link>
             <Button 
               className="btn-primary-nav text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
               size="sm"
@@ -106,9 +112,15 @@ const Navigation = () => {
               Features
             </Link>
             <div className="flex flex-col space-y-2 pt-4">
-              <Button variant="ghost" size="sm" className="hover:bg-white/10 hover:border-white/40 transition-all duration-300">
-                Contact
-              </Button>
+              <Link to="/contact">
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  className={`hover:bg-white/10 hover:border-white/40 transition-all duration-300 w-full ${location.pathname === '/contact' ? 'bg-primary/20 text-primary' : ''}`}
+                >
+                  Contact
+                </Button>
+              </Link>
               <Button 
                 className="btn-primary-nav text-white font-semibold px-6 py-2 rounded-full transition-all duration-300 transform hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background w-full"
                 size="sm"
