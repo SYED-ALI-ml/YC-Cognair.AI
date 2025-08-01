@@ -1,4 +1,4 @@
-# Team Images Folder
+# Team Images Folderl
 
 This folder should contain the following team member photos:
 

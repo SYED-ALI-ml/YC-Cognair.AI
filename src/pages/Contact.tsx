@@ -66,21 +66,21 @@ const Contact = () => {
       role: "CEO & Co-Founder",
       email: "agnikbosconian@gmail.com",
       linkedin: "https://www.linkedin.com/in/agnik-sarkar",
-      image: "/assets/team/agnik.png"
+      image: "/assets/team/agnik.jpg"
     },
     {
       name: "Syed Mohammad Ali Jafri", 
       role: "CTO & Co-Founder",
       email: "alimohd3946@gmail.com",
       linkedin: "https://www.linkedin.com/in/syed-mohammad-ali-jafri",
-      image: "/assets/team/syed.png"
+      image: "/assets/team/syed.jpeg"
     },
     {
       name: "Arittra Bag",
       role: "COO & Co-Founder", 
       email: "auzinfotech@gmail.com",
       linkedin: "https://www.linkedin.com/in/arittra-bag-00b12a1b5",
-      image: "/assets/team/arittra.png"
+      image: "/assets/team/arittra.jpg"
     }
   ];
 
